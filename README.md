@@ -1,5 +1,9 @@
 # cassandra-on-docker
 
+[![Build Status](https://travis-ci.org/OlegGorj/cassandra-on-docker.svg?branch=master)](https://travis-ci.org/OlegGorj/cassandra-on-docker)
+[![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?branch=master)](https://travis-ci.org/OlegGorj/cassandra-on-docker)
+[![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://dockerbuildbadges.quelltext.eu/status.svg?organization=oleggorj&repository=cassandra-on-docker)
+
 Latest Apache Cassandra docker image based on alpine
 
 Note: this repo is still WIP

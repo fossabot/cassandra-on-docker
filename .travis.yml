@@ -1,0 +1,14 @@
+language: bash
+services: docker
+sudo: required
+
+env:
+  - VERSION=3.11
+  - VERSION=3.11 ARCH=i386
+
+before_install:
+  - docker info
+  - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+
+install:
+  - git clone https://github.com/OlegGorj/cassandra-on-docker.git ~/cassandra-on-docker
