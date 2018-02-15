@@ -3,7 +3,7 @@ all: runtime
 
 .PHONY: clean
 clean:
-	docker rmi -f oleggorj/cassandra:${TAG} || :
+	docker rmi -f oleggorj/cassandra:latest || :
 
 .PHONY: runtime
 runtime:

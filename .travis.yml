@@ -9,8 +9,8 @@ env:
     - BUILD_DATE: $(date -u +"%Y-%m-%dT%H:%M:%SZ")
     - VCS_REF: "0.7"
     - TAG: $(echo ${VERSION}-alpine)
-#    - TAG_MINOR: ${VERSION%.*}-alpine
-#    - TAG_MAJOR: ${VERSION%%.*}-alpine
+    - TAG_MINOR: ${VERSION%.*}-alpine
+    - TAG_MAJOR: ${VERSION%%.*}-alpine
     - BATS_VER: 0.4.0
 
 before_install:
