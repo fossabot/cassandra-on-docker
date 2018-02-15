@@ -11,7 +11,7 @@ runtime:
 		--build-arg BUILD_DATE=${BUILD_DATE} \
 		--build-arg VCS_REF=${VCS_REF} \
 		--build-arg VERSION=${VERSION} \
-		--no-cache -t oleggorj/cassandra:${TAG} .
+		--no-cache --tag oleggorj/cassandra:latest .
 	docker images | grep cassandra
 
 .PHONY: test
@@ -20,4 +20,4 @@ test:
 	docker run --net vnet --name cassandra --hostname cassandra.vnet -e MAX_HEAP_SIZE=2048M -e HEAP_NEWSIZE=800M -d  oleggorj/cassandra:${TAG}
 	docker run --net vnet oleggorj/cassandra:${TAG}  bash -c 'for i in $$(seq 200); do nc -z cassandra.vnet 9042 && echo "test starting" && break; echo -n .; sleep 1; [ $$i -ge 300 ] && echo timeout && exit 124; done'
 
-	bats test/test_*.bats
+#	bats test/test_*.bats

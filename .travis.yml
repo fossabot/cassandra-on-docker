@@ -6,9 +6,9 @@ services:
 
 env:
   - VERSION: "3.11.0"
-  - BUILD_DATE: $(date -u +"%Y-%m-%dT%H:%M:%SZ")
+  - BUILD_DATE: "$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
   - VCS_REF: ${CIRCLE_SHA1:0:7}
-  - TAG: ${VERSION}-alpine
+  - TAG: "${VERSION}-alpine"
   - TAG_MINOR: ${VERSION%.*}-alpine
   - TAG_MAJOR: ${VERSION%%.*}-alpine
   - BATS_VER: 0.4.0
