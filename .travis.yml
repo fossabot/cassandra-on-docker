@@ -1,14 +1,22 @@
 language: bash
-services: docker
 sudo: required
 
+services:
+  - docker
+
 env:
-  - VERSION=3.11
-  - VERSION=3.11 ARCH=i386
+  - VERSION: "3.11.0"
+  - BUILD_DATE: $(date -u +"%Y-%m-%dT%H:%M:%SZ")
+  - VCS_REF: ${CIRCLE_SHA1:0:7}
+  - TAG: ${VERSION}-alpine
+  - TAG_MINOR: ${VERSION%.*}-alpine
+  - TAG_MAJOR: ${VERSION%%.*}-alpine
+  - BATS_VER: 0.4.0
 
 before_install:
   - docker info
   - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 
 install:
+  - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circleci-docker.sh | bash -s -- 1.10.0
   - git clone https://github.com/OlegGorj/cassandra-on-docker.git ~/cassandra-on-docker
