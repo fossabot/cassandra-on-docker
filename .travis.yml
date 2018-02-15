@@ -15,8 +15,11 @@ env:
 
 before_install:
   - docker info
+  - docker version
   - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 
 install:
+  - sudo pip install docker-compose
   - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circleci-docker.sh | bash -s -- 1.10.0
   - git clone https://github.com/OlegGorj/cassandra-on-docker.git ~/cassandra-on-docker
+  - make all
