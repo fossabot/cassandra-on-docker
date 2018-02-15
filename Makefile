@@ -7,11 +7,12 @@ clean:
 
 .PHONY: runtime
 runtime:
+	docker images
 	docker build \
 		--build-arg BUILD_DATE=${BUILD_DATE} \
 		--build-arg VCS_REF=${VCS_REF} \
 		--build-arg VERSION=${VERSION} \
-		--no-cache --tag oleggorj/cassandra:latest .
+		--no-cache --tag oleggorj/cassandra:latest https://github.com/OlegGorj/cassandra-on-docker.git
 	docker images | grep cassandra
 
 .PHONY: test
