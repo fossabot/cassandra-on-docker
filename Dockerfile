@@ -1,7 +1,7 @@
 FROM alpine:3.5
 
 ARG BUILD_DATE
-ARG VCS_REF
+#ARG VCS_REF
 ARG VERSION
 
 LABEL \
@@ -10,7 +10,7 @@ LABEL \
     org.label-schema.license="Apache License 2.0" \
     org.label-schema.name="oleggorj/cassandra" \
     org.label-schema.url="https://github.com/oleggorj" \
-    org.label-schema.vcs-ref=$VCS_REF \
+#    org.label-schema.vcs-ref=$VCS_REF \
     org.label-schema.vcs-type="Git" \
     org.label-schema.vcs-url="https://github.com/oleggorj/cassandra-on-docker"
 
