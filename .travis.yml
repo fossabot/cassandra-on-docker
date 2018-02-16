@@ -15,6 +15,14 @@ env:
     - BATS_VER: 0.4.0
     - GIT_REPO_LINK: "https://github.com/OlegGorj/cassandra-on-docker.git"
 
+addons:
+  apt:
+    packages:
+      - libcurl4-openssl-dev
+      - libelf-dev
+      - libdw-dev
+      - cmake
+
 before_install:
   - docker info
   - docker version
