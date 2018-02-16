@@ -1,0 +1,7 @@
+.github/*
+.editorconfig
+.gitignore
+.travisignore
+CHANGELOG
+LICENSE
+*.md
