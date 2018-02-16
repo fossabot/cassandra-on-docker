@@ -3,10 +3,11 @@
 [![Build Status](https://travis-ci.org/OlegGorj/cassandra-on-docker.svg?branch=master)](https://travis-ci.org/OlegGorj/cassandra-on-docker)
 [![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?branch=master)](https://travis-ci.org/OlegGorj/cassandra-on-docker)
 [![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://dockerbuildbadges.quelltext.eu/status.svg?organization=oleggorj&repository=cassandra-on-docker)
+[![codecov](https://codecov.io/gh/OlegGorj/cassandra-on-docker/branch/master/graph/badge.svg)](https://codecov.io/gh/OlegGorj/cassandra-on-docker)
+
 
 Latest Apache Cassandra docker image based on alpine
 
-Note: this repo is still WIP
 
 
 ## Quick setup
@@ -16,13 +17,13 @@ Note: this repo is still WIP
 docker network create vnet
 
 # startup cassandra
-docker run --net vnet --name cassandra -d oleggorj/cassandra:3.11-alpine
+docker run --net vnet --name cassandra -d oleggorj/cassandra:3.11.0-alpine
 
 # tail logs
 docker logs -f cassandra
 
 # cqlsh access
-docker run -it --rm --net vnet oleggorj/cassandra:3.11-alpine cqlsh cassandra.vnet
+docker run -it --rm --net vnet oleggorj/cassandra:3.11.0-alpine cqlsh cassandra.vnet
 
 Connected to Test Cluster at cassandra.vnet:9042.
 [cqlsh 5.0.1 | Cassandra 3.11 | CQL spec 3.4.4 | Native protocol v4]
