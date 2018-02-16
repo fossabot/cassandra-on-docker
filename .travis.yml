@@ -8,10 +8,12 @@ env:
     - BUILD_DATE: $(date -u +"%Y-%m-%dT%H:%M:%SZ")
     - TAG: $(echo ${VERSION}-alpine)
     - IMAGE: cassandra
+    - REPO: $DOCKER_USERNAME
     - VCS_REF: "0.7"
     - TAG_MINOR: ${VERSION%.*}-alpine
     - TAG_MAJOR: ${VERSION%%.*}-alpine
     - BATS_VER: 0.4.0
+    - GIT_REPO_LINK: "https://github.com/OlegGorj/cassandra-on-docker.git"
 
 before_install:
   - docker info
