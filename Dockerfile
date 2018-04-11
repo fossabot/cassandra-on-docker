@@ -44,7 +44,7 @@ RUN set -x \
         | grep "preferred" \
         | sed -n 's#.*"\(http://*[^"]*\)".*#\1#p' \
         ) \
-    && wget -q -O - ${mirror_url}/cassandra/${CASSANDRA_VERSION}/apache-cassandra-${CASSANDRA_VERSION}-bin.tar.gz \
+    && wget -q -O - ${mirror_url}cassandra/${CASSANDRA_VERSION}/apache-cassandra-${CASSANDRA_VERSION}-bin.tar.gz \
         | tar -xzf - -C /usr/local \
     ## user/dir/permmsion
     && adduser -D  -g '' -s /sbin/nologin -u 1000 docker \
