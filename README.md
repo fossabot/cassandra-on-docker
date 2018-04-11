@@ -4,10 +4,11 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?branch=master)](https://travis-ci.org/OlegGorj/cassandra-on-docker)
 [![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://dockerbuildbadges.quelltext.eu/status.svg?organization=oleggorj&repository=cassandra-on-docker)
 [![codecov](https://codecov.io/gh/OlegGorj/cassandra-on-docker/branch/master/graph/badge.svg)](https://codecov.io/gh/OlegGorj/cassandra-on-docker)
+[![GitHub release](https://img.shields.io/github/release/OlegGorj/cassandra-on-docker.svg)](https://github.com/OlegGorj/cassandra-on-docker/releases)
+[![GitHub issues](https://img.shields.io/github/issues/OlegGorj/cassandra-on-docker.svg)](https://github.com/OlegGorj/cassandra-on-docker/issues)
 
 
 Latest Apache Cassandra docker image based on alpine
-
 
 
 ## Quick setup
@@ -76,3 +77,6 @@ docker-compose stop
 docker-compose rm -v
 
 ```
+
+
+---
