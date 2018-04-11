@@ -8,22 +8,38 @@
 [![GitHub issues](https://img.shields.io/github/issues/OlegGorj/cassandra-on-docker.svg)](https://github.com/OlegGorj/cassandra-on-docker/issues)
 
 
-Latest Apache Cassandra docker image based on alpine
+Latest Apache Cassandra (`3.11.2`) docker image based on alpine os
 
 
 ## Quick setup
 
-```
-# network
+#### Create network
+
+```bash
 docker network create vnet
+```
 
-# startup cassandra
+#### Startup Cassandra in container (simple start)
+
+```bash
 docker run --net vnet --name cassandra -d oleggorj/cassandra:3.11.0-alpine
+```
 
-# tail logs
+#### Start Cassandra container AND map ports to the node (or local machine). It is done this way so external services and clients could see Cassandra DB.
+
+```bash
+docker run --net vnet --name cassandra -p 9042:9042 -p 9160:9160 -p 7199:7199 -d oleggorj/cassandra:3.11.0-alpine
+```
+
+#### Tail Cassandra logs
+
+```bash
 docker logs -f cassandra
+```
 
-# cqlsh access
+#### Access Cassandra using cqlsh
+
+```bash
 docker run -it --rm --net vnet oleggorj/cassandra:3.11.0-alpine cqlsh cassandra.vnet
 
 Connected to Test Cluster at cassandra.vnet:9042.
@@ -40,7 +56,7 @@ cqlsh> SELECT release_version, cluster_name FROM system.local;
 cqlsh> exit
 ```
 
-## Cluster setup on single host
+## Cluster containers setup on single host
 
 ```
 # startup cassandra
