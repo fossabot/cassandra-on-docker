@@ -1,5 +1,6 @@
 # cassandra-on-docker
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/6ea5114267b848cca9799603bbffa7bc)](https://app.codacy.com/app/oleggorj/cassandra-on-docker?utm_source=github.com&utm_medium=referral&utm_content=OlegGorj/cassandra-on-docker&utm_campaign=badger)
 [![Build Status](https://travis-ci.org/OlegGorj/cassandra-on-docker.svg?branch=master)](https://travis-ci.org/OlegGorj/cassandra-on-docker)
 [![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?branch=master)](https://travis-ci.org/OlegGorj/cassandra-on-docker)
 [![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://dockerbuildbadges.quelltext.eu/status.svg?organization=oleggorj&repository=cassandra-on-docker)
