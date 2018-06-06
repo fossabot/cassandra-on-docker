@@ -9,7 +9,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/OlegGorj/cassandra-on-docker.svg)](https://github.com/OlegGorj/cassandra-on-docker/issues)
 
 
-Latest Apache Cassandra (`3.11.2`) docker image based on alpine os
+Latest Apache Cassandra `3.11.2` docker image based on alpine os
 
 
 ## Quick setup
@@ -18,6 +18,7 @@ Latest Apache Cassandra (`3.11.2`) docker image based on alpine os
 
 ```bash
 docker network create vnet
+
 ```
 
 #### Startup Cassandra in container (simple start)
@@ -55,6 +56,7 @@ cqlsh> SELECT release_version, cluster_name FROM system.local;
 
 (1 rows)
 cqlsh> exit
+
 ```
 
 ## Cluster containers setup on single host
