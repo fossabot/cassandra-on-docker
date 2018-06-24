@@ -7,6 +7,7 @@
 [![codecov](https://codecov.io/gh/OlegGorj/cassandra-on-docker/branch/master/graph/badge.svg)](https://codecov.io/gh/OlegGorj/cassandra-on-docker)
 [![GitHub release](https://img.shields.io/github/release/OlegGorj/cassandra-on-docker.svg)](https://github.com/OlegGorj/cassandra-on-docker/releases)
 [![GitHub issues](https://img.shields.io/github/issues/OlegGorj/cassandra-on-docker.svg)](https://github.com/OlegGorj/cassandra-on-docker/issues)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FOlegGorj%2Fcassandra-on-docker.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FOlegGorj%2Fcassandra-on-docker?ref=badge_shield)
 
 
 Latest Apache Cassandra `3.11.2` docker image based on alpine os
@@ -99,3 +100,7 @@ docker-compose rm -v
 
 
 ---
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FOlegGorj%2Fcassandra-on-docker.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FOlegGorj%2Fcassandra-on-docker?ref=badge_large)
